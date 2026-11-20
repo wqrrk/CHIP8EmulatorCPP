@@ -1,0 +1,485 @@
+[1/2] Processing file /Users/wark/CLionProjects/CHIP8Emulator/main.cpp.
+1188 warnings generated.
+[2/2] Processing file /Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp.
+2519 warnings generated.
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:27:33: warning: initializer list should have a trailing comma [readability-trailing-comma]
+   27 |     0xF0, 0x80, 0xF0, 0x80, 0x80
+      |                                 ^
+      |                                 ,
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:48:58: warning: 0x50 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   48 |     std::copy(FONT.begin(), FONT.end(), memory.begin() + 0x50);
+      |                                                          ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:94:9: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+   94 |         (static_cast<uint16_t>(memory[pc]) << 8) |
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:94:47: warning: 8 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   94 |         (static_cast<uint16_t>(memory[pc]) << 8) |
+      |                                               ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:94:47: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+   94 |         (static_cast<uint16_t>(memory[pc]) << 8) |
+      |                                            ~~ ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:106:24: warning: statement should be inside braces [readability-braces-around-statements]
+  106 |     if (delayTimer > 0) --delayTimer;
+      |                        ^             
+      |                         {
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:107:24: warning: statement should be inside braces [readability-braces-around-statements]
+  107 |     if (soundTimer > 0) --soundTimer;
+      |                        ^             
+      |                         {
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:118:18: warning: 3 adjacent parameters of 'draw' of similar type ('uint8_t') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+  118 | void Chip8::draw(uint8_t x, uint8_t y, uint8_t height) {
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:118:26: note: the first parameter in the range is 'x'
+  118 | void Chip8::draw(uint8_t x, uint8_t y, uint8_t height) {
+      |                          ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:118:48: note: the last parameter in the range is 'height'
+  118 | void Chip8::draw(uint8_t x, uint8_t y, uint8_t height) {
+      |                                                ^~~~~~
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:118:26: warning: parameter name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+  118 | void Chip8::draw(uint8_t x, uint8_t y, uint8_t height) {
+      |                          ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:118:37: warning: parameter name 'y' is too short, expected at least 3 characters [readability-identifier-length]
+  118 | void Chip8::draw(uint8_t x, uint8_t y, uint8_t height) {
+      |                                     ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:123:15: warning: 0xF is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  123 |     registers[0xF] = 0;
+      |               ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:128:37: warning: 8 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  128 |         for (uint8_t col = 0; col < 8; ++col) {
+      |                                     ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:129:27: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+  129 |             if ((sprite & (0x80 >> col)) == 0) continue;
+      |                         ~ ^~~~~~~~~~~~~
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:129:28: warning: 0x80 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  129 |             if ((sprite & (0x80 >> col)) == 0) continue;
+      |                            ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:129:28: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+  129 |             if ((sprite & (0x80 >> col)) == 0) continue;
+      |                            ^~~~ ~~
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:129:47: warning: statement should be inside braces [readability-braces-around-statements]
+  129 |             if ((sprite & (0x80 >> col)) == 0) continue;
+      |                                               ^         
+      |                                                {
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:131:25: warning: variable name 'px' is too short, expected at least 3 characters [readability-identifier-length]
+  131 |             std::size_t px = (x + col) % SCREEN_WIDTH;
+      |                         ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:132:25: warning: variable name 'py' is too short, expected at least 3 characters [readability-identifier-length]
+  132 |             std::size_t py = (y + row) % SCREEN_HEIGHT;
+      |                         ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:133:31: warning: '*' has higher precedence than '+'; add parentheses to explicitly specify the order of operations [readability-math-missing-parentheses]
+  133 |             std::size_t pos = py * SCREEN_WIDTH + px;
+      |                               ^~~~~~~~~~~~~~~~~
+      |                               (                )
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:136:27: warning: 0xF is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  136 |                 registers[0xF] = 1;
+      |                           ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:139:29: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+  139 |             display[pos] ^= 1;
+      |                          ~~ ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:144:13: warning: function 'execute' has cognitive complexity of 57 (threshold 25) [readability-function-cognitive-complexity]
+  144 | void Chip8::execute(uint16_t opcode) {
+      |             ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:151:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+  151 |     switch (opcode & 0xF000) {
+      |     ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:153:13: note: +2, including nesting penalty of 1, nesting level increased to 2
+  153 |             if (opcode == 0x00E0) {
+      |             ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:155:20: note: +1, nesting level increased to 2
+  155 |             } else if (opcode == 0x00EE) {
+      |                    ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:156:17: note: +3, including nesting penalty of 2, nesting level increased to 3
+  156 |                 if (sp == 0) {
+      |                 ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:160:15: note: +1, nesting level increased to 2
+  160 |             } else {
+      |               ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:170:13: note: +2, including nesting penalty of 1, nesting level increased to 2
+  170 |             if (sp >= stack.size()) {
+      |             ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:178:13: note: +2, including nesting penalty of 1, nesting level increased to 2
+  178 |             if (registers[x] == kk) pc += 2;
+      |             ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:182:13: note: +2, including nesting penalty of 1, nesting level increased to 2
+  182 |             if (registers[x] != kk) pc += 2;
+      |             ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:186:13: note: +2, including nesting penalty of 1, nesting level increased to 2
+  186 |             if (n != 0) {
+      |             ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:189:13: note: +2, including nesting penalty of 1, nesting level increased to 2
+  189 |             if (registers[x] == registers[y]) pc += 2;
+      |             ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:201:13: note: +2, including nesting penalty of 1, nesting level increased to 2
+  201 |             switch (n) {
+      |             ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:248:13: note: +2, including nesting penalty of 1, nesting level increased to 2
+  248 |             if (n != 0) {
+      |             ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:251:13: note: +2, including nesting penalty of 1, nesting level increased to 2
+  251 |             if (registers[x] != registers[y]) pc += 2;
+      |             ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:273:13: note: +2, including nesting penalty of 1, nesting level increased to 2
+  273 |             if (registers[x] >= keypad.size()) {
+      |             ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:277:13: note: +2, including nesting penalty of 1, nesting level increased to 2
+  277 |             if (kk == 0x9E) {
+      |             ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:278:17: note: +3, including nesting penalty of 2, nesting level increased to 3
+  278 |                 if (keypad[registers[x]]) pc += 2;
+      |                 ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:279:20: note: +1, nesting level increased to 2
+  279 |             } else if (kk == 0xA1) {
+      |                    ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:280:17: note: +3, including nesting penalty of 2, nesting level increased to 3
+  280 |                 if (!keypad[registers[x]]) pc += 2;
+      |                 ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:281:15: note: +1, nesting level increased to 2
+  281 |             } else {
+      |               ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:287:13: note: +2, including nesting penalty of 1, nesting level increased to 2
+  287 |             switch (kk) {
+      |             ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:294:21: note: +3, including nesting penalty of 2, nesting level increased to 3
+  294 |                     if (it == keypad.end()) {
+      |                     ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:296:23: note: +1, nesting level increased to 3
+  296 |                     } else {
+      |                       ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:320:21: note: +3, including nesting penalty of 2, nesting level increased to 3
+  320 |                     if (index > MEMORY_SIZE - 3) {
+      |                     ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:332:21: note: +3, including nesting penalty of 2, nesting level increased to 3
+  332 |                     if (static_cast<std::size_t>(index) + x >= MEMORY_SIZE) {
+      |                     ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:335:21: note: +3, including nesting penalty of 2, nesting level increased to 3
+  335 |                     for (unsigned i = 0; i <= x; ++i) {
+      |                     ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:341:21: note: +3, including nesting penalty of 2, nesting level increased to 3
+  341 |                     if (static_cast<std::size_t>(index) + x >= MEMORY_SIZE) {
+      |                     ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:344:21: note: +3, including nesting penalty of 2, nesting level increased to 3
+  344 |                     for (unsigned i = 0; i <= x; ++i) {
+      |                     ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:145:35: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+  145 |     const uint16_t nnn = opcode & 0x0FFF;
+      |                                 ~ ^~~~~~
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:146:19: warning: variable name 'kk' is too short, expected at least 3 characters [readability-identifier-length]
+  146 |     const uint8_t kk = opcode & 0x00FF;
+      |                   ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:146:33: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+  146 |     const uint8_t kk = opcode & 0x00FF;
+      |                               ~ ^~~~~~
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:147:19: warning: variable name 'n' is too short, expected at least 3 characters [readability-identifier-length]
+  147 |     const uint8_t n = opcode & 0x000F;
+      |                   ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:147:32: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+  147 |     const uint8_t n = opcode & 0x000F;
+      |                              ~ ^~~~~~
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:148:19: warning: variable name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+  148 |     const uint8_t x = (opcode >> 8) & 0x0F;
+      |                   ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:148:23: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+  148 |     const uint8_t x = (opcode >> 8) & 0x0F;
+      |                       ^~~~~~~~~~~~~ ~
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:148:34: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+  148 |     const uint8_t x = (opcode >> 8) & 0x0F;
+      |                               ~~ ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:149:19: warning: variable name 'y' is too short, expected at least 3 characters [readability-identifier-length]
+  149 |     const uint8_t y = (opcode >> 4) & 0x0F;
+      |                   ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:149:23: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+  149 |     const uint8_t y = (opcode >> 4) & 0x0F;
+      |                       ^~~~~~~~~~~~~ ~
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:149:34: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+  149 |     const uint8_t y = (opcode >> 4) & 0x0F;
+      |                               ~~ ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:151:22: warning: 0xF000 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  151 |     switch (opcode & 0xF000) {
+      |                      ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:151:22: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+  151 |     switch (opcode & 0xF000) {
+      |                    ~ ^~~~~~
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:153:27: warning: 0x00E0 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  153 |             if (opcode == 0x00E0) {
+      |                           ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:155:34: warning: 0x00EE is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  155 |             } else if (opcode == 0x00EE) {
+      |                                  ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:165:14: warning: 0x1000 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  165 |         case 0x1000:
+      |              ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:169:14: warning: 0x2000 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  169 |         case 0x2000:
+      |              ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:177:14: warning: 0x3000 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  177 |         case 0x3000:
+      |              ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:178:36: warning: statement should be inside braces [readability-braces-around-statements]
+  178 |             if (registers[x] == kk) pc += 2;
+      |                                    ^        
+      |                                     {
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:181:14: warning: 0x4000 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  181 |         case 0x4000:
+      |              ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:182:36: warning: statement should be inside braces [readability-braces-around-statements]
+  182 |             if (registers[x] != kk) pc += 2;
+      |                                    ^        
+      |                                     {
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:185:14: warning: 0x5000 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  185 |         case 0x5000:
+      |              ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:189:46: warning: statement should be inside braces [readability-braces-around-statements]
+  189 |             if (registers[x] == registers[y]) pc += 2;
+      |                                              ^        
+      |                                               {
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:192:14: warning: 0x6000 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  192 |         case 0x6000:
+      |              ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:196:14: warning: 0x7000 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  196 |         case 0x7000:
+      |              ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:200:14: warning: 0x8000 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  200 |         case 0x8000:
+      |              ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:209:45: warning: 0xFF is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  209 |                     registers[x] = result & 0xFF;
+      |                                             ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:209:45: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+  209 |                     registers[x] = result & 0xFF;
+      |                                           ~ ^~~~
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:210:31: warning: 0xF is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  210 |                     registers[0xF] = result > 255;
+      |                               ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:210:38: warning: implicit conversion 'bool' -> 'value_type' (aka 'unsigned char') [readability-implicit-bool-conversion]
+  210 |                     registers[0xF] = result > 255;
+      |                                      ^           
+      |                                      static_cast<value_type>( )
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:210:47: warning: 255 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  210 |                     registers[0xF] = result > 255;
+      |                                               ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:214:22: warning: 0x5 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  214 |                 case 0x5: {
+      |                      ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:217:31: warning: 0xF is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  217 |                     registers[0xF] = noBorrow;
+      |                               ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:217:38: warning: implicit conversion 'bool' -> 'value_type' (aka 'unsigned char') [readability-implicit-bool-conversion]
+  217 |                     registers[0xF] = noBorrow;
+      |                                      ^       
+      |                                      static_cast<value_type>( )
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:221:22: warning: 0x6 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  221 |                 case 0x6: {
+      |                      ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:223:45: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+  223 |                     registers[x] = value >> 1;
+      |                                          ~~ ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:224:31: warning: 0xF is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  224 |                     registers[0xF] = value & 1;
+      |                               ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:224:46: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+  224 |                     registers[0xF] = value & 1;
+      |                                            ~ ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:228:22: warning: 0x7 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  228 |                 case 0x7: {
+      |                      ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:231:31: warning: 0xF is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  231 |                     registers[0xF] = noBorrow;
+      |                               ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:231:38: warning: implicit conversion 'bool' -> 'value_type' (aka 'unsigned char') [readability-implicit-bool-conversion]
+  231 |                     registers[0xF] = noBorrow;
+      |                                      ^       
+      |                                      static_cast<value_type>( )
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:235:22: warning: 0xE is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  235 |                 case 0xE: {
+      |                      ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:237:45: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+  237 |                     registers[x] = value << 1;
+      |                                          ~~ ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:238:31: warning: 0xF is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  238 |                     registers[0xF] = (value >> 7) & 1;
+      |                               ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:238:38: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+  238 |                     registers[0xF] = (value >> 7) & 1;
+      |                                      ^~~~~~~~~~~~ ~
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:238:48: warning: 7 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  238 |                     registers[0xF] = (value >> 7) & 1;
+      |                                                ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:238:48: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+  238 |                     registers[0xF] = (value >> 7) & 1;
+      |                                             ~~ ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:247:14: warning: 0x9000 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  247 |         case 0x9000:
+      |              ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:251:46: warning: statement should be inside braces [readability-braces-around-statements]
+  251 |             if (registers[x] != registers[y]) pc += 2;
+      |                                              ^        
+      |                                               {
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:254:14: warning: 0xA000 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  254 |         case 0xA000:
+      |              ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:258:14: warning: 0xB000 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  258 |         case 0xB000:
+      |              ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:262:14: warning: 0xC000 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  262 |         case 0xC000: {
+      |              ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:263:64: warning: 255 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  263 |             std::uniform_int_distribution<int> distribution(0, 255);
+      |                                                                ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:264:28: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+  264 |             registers[x] = distribution(randomEngine) & kk;
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~ ~
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:268:14: warning: 0xD000 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  268 |         case 0xD000:
+      |              ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:272:14: warning: 0xE000 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  272 |         case 0xE000:
+      |              ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:277:23: warning: 0x9E is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  277 |             if (kk == 0x9E) {
+      |                       ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:278:42: warning: statement should be inside braces [readability-braces-around-statements]
+  278 |                 if (keypad[registers[x]]) pc += 2;
+      |                                          ^        
+      |                                           {
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:279:30: warning: 0xA1 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  279 |             } else if (kk == 0xA1) {
+      |                              ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:280:43: warning: statement should be inside braces [readability-braces-around-statements]
+  280 |                 if (!keypad[registers[x]]) pc += 2;
+      |                                           ^        
+      |                                            {
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:286:14: warning: 0xF000 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  286 |         case 0xF000:
+      |              ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:288:22: warning: 0x07 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  288 |                 case 0x07:
+      |                      ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:292:22: warning: 0x0A is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  292 |                 case 0x0A: {
+      |                      ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:293:21: warning: 'auto it' can be declared as 'auto *it' [readability-qualified-auto]
+  293 |                     auto it = std::find(keypad.begin(), keypad.end(), true);
+      |                     ^~~~
+      |                     auto *
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:293:26: warning: variable name 'it' is too short, expected at least 3 characters [readability-identifier-length]
+  293 |                     auto it = std::find(keypad.begin(), keypad.end(), true);
+      |                          ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:303:22: warning: 0x15 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  303 |                 case 0x15:
+      |                      ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:307:22: warning: 0x18 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  307 |                 case 0x18:
+      |                      ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:311:22: warning: 0x1E is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  311 |                 case 0x1E:
+      |                      ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:315:22: warning: 0x29 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  315 |                 case 0x29:
+      |                      ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:316:29: warning: 0x50 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  316 |                     index = 0x50 + registers[x] * 5;
+      |                             ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:316:36: warning: '*' has higher precedence than '+'; add parentheses to explicitly specify the order of operations [readability-math-missing-parentheses]
+  316 |                     index = 0x50 + registers[x] * 5;
+      |                                    ^~~~~~~~~~~~~~~~~
+      |                                    (               )
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:316:51: warning: 5 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  316 |                     index = 0x50 + registers[x] * 5;
+      |                                                   ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:319:22: warning: 0x33 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  319 |                 case 0x33: {
+      |                      ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:325:45: warning: 100 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  325 |                     memory[index] = value / 100;
+      |                                             ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:326:50: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  326 |                     memory[index + 1] = (value / 10) % 10;
+      |                                                  ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:326:56: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  326 |                     memory[index + 1] = (value / 10) % 10;
+      |                                                        ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:327:49: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  327 |                     memory[index + 2] = value % 10;
+      |                                                 ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:331:22: warning: 0x55 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  331 |                 case 0x55:
+      |                      ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:340:22: warning: 0x65 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  340 |                 case 0x65:
+      |                      ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:375:25: warning: 16 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  375 |     for (int i = 0; i < 16; ++i) {
+      |                         ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:381:24: warning: statement should be inside braces [readability-braces-around-statements]
+  381 |         if (i % 4 == 3) std::cout << '\n';
+      |                        ^                  
+      |                         {
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:388:22: warning: loop variable name 'y' is too short, expected at least 2 characters [readability-identifier-length]
+  388 |     for (std::size_t y = 0; y < SCREEN_HEIGHT; ++y) {
+      |                      ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:389:26: warning: loop variable name 'x' is too short, expected at least 2 characters [readability-identifier-length]
+  389 |         for (std::size_t x = 0; x < SCREEN_WIDTH; ++x) {
+      |                          ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:390:27: warning: implicit conversion 'value_type' (aka 'unsigned char') -> 'bool' [readability-implicit-bool-conversion]
+  390 |             std::cout << (display[y * SCREEN_WIDTH + x] ? "██" : "  ");
+      |                           ^
+      |                           (                             != 0u)
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:390:35: warning: '*' has higher precedence than '+'; add parentheses to explicitly specify the order of operations [readability-math-missing-parentheses]
+  390 |             std::cout << (display[y * SCREEN_WIDTH + x] ? "██" : "  ");
+      |                                   ^~~~~~~~~~~~~~~~
+      |                                   (               )
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.h:30:13: warning: function 'Chip8::getRegister' has a definition with different parameter names [readability-inconsistent-declaration-parameter-name]
+   30 |     uint8_t getRegister(std::size_t index) const;
+      |             ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.cpp:359:16: note: the definition seen here
+  359 | uint8_t Chip8::getRegister(std::size_t reg) const {
+      |                ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.h:30:13: note: differing parameters are named here: ('index'), in definition: ('reg')
+   30 |     uint8_t getRegister(std::size_t index) const;
+      |             ^                       ~~~~~
+      |                                     reg
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.h:36:25: warning: 16 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   36 |     std::array<uint8_t, 16> registers{};
+      |                         ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.h:37:26: warning: 16 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   37 |     std::array<uint16_t, 16> stack{};
+      |                          ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.h:39:22: warning: 16 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   39 |     std::array<bool, 16> keypad{};
+      |                      ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.h:52:23: warning: parameter name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+   52 |     void draw(uint8_t x, uint8_t y, uint8_t height);
+      |                       ^
+/Users/wark/CLionProjects/CHIP8Emulator/Chip8.h:52:34: warning: parameter name 'y' is too short, expected at least 3 characters [readability-identifier-length]
+   52 |     void draw(uint8_t x, uint8_t y, uint8_t height);
+      |                                  ^
+/Users/wark/CLionProjects/CHIP8Emulator/main.cpp:16:5: warning: an exception may be thrown in function 'main' which should not throw exceptions [bugprone-exception-escape]
+   16 | int main(int argc, char* argv[]) {
+      |     ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.sdk/usr/include/c++/v1/stdexcept:244:3: note: frame #0: unhandled exception of type 'length_error' may be thrown in function '__throw_length_error' here
+  244 |   throw length_error(__msg);
+      |   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.sdk/usr/include/c++/v1/string:2572:5: note: frame #1: function '__throw_length_error' calls function '__throw_length_error' here
+ 2572 |     std::__throw_length_error("basic_string");
+      |     ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.sdk/usr/include/c++/v1/string:2314:7: note: frame #2: function '__init_internal_buffer' calls function '__throw_length_error' here
+ 2314 |       __throw_length_error();
+      |       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.sdk/usr/include/c++/v1/string:2674:17: note: frame #3: function '__init' calls function '__init_internal_buffer' here
+ 2674 |   pointer __p = __init_internal_buffer(__sz);
+      |                 ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.sdk/usr/include/c++/v1/string:1075:5: note: frame #4: function 'basic_string<0>' calls function '__init' here
+ 1075 |     __init(__s, traits_type::length(__s));
+      |     ^
+/Users/wark/CLionProjects/CHIP8Emulator/main.cpp:17:22: note: frame #5: function 'main' calls function 'basic_string<0>' here
+   17 |     if (argc == 2 && std::string(argv[1]) == "--help") {
+      |                      ^
+/Users/wark/CLionProjects/CHIP8Emulator/main.cpp:28:21: warning: 20 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   28 |         int steps = 20;
+      |                     ^
+/Users/wark/CLionProjects/CHIP8Emulator/main.cpp:40:65: warning: 1000000 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   40 |             if (parsed != value.size() || steps <= 0 || steps > 1000000) {
+      |                                                                 ^
+Suppressed 2398 warnings (2398 in non-user code).
+Use -header-filter=.* or leave it as default to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

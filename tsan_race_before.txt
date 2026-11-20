@@ -1,0 +1,35 @@
+==================
+WARNING: ThreadSanitizer: data race (pid=28864)
+  Write of size 4 at 0x00016b588a4c by thread T2:
+    #0 RuntimeFaults::triggerDataRace()::$_0::operator()() const RuntimeFaults.cpp:25 (CHIP8Emulator:arm64+0x100004b08)
+    #1 std::__1::__invoke_result_impl<void, RuntimeFaults::triggerDataRace()::$_0>::type std::__1::__invoke[abi:nqe220106]<RuntimeFaults::triggerDataRace()::$_0>(RuntimeFaults::triggerDataRace()::$_0&&) invoke.h:90 (CHIP8Emulator:arm64+0x100004b08)
+    #2 void std::__1::__thread_execute[abi:nqe220106]<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct>>, RuntimeFaults::triggerDataRace()::$_0, 0ul>(std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct>>, RuntimeFaults::triggerDataRace()::$_0>&, std::__1::__integer_sequence<unsigned long, 0ul>) thread.h:161 (CHIP8Emulator:arm64+0x100004b08)
+    #3 void* std::__1::__thread_proxy[abi:nqe220106]<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct>>, RuntimeFaults::triggerDataRace()::$_0>>(void*) thread.h:169 (CHIP8Emulator:arm64+0x100004b08)
+
+  Previous write of size 4 at 0x00016b588a4c by thread T1:
+    #0 RuntimeFaults::triggerDataRace()::$_0::operator()() const RuntimeFaults.cpp:25 (CHIP8Emulator:arm64+0x100004b08)
+    #1 std::__1::__invoke_result_impl<void, RuntimeFaults::triggerDataRace()::$_0>::type std::__1::__invoke[abi:nqe220106]<RuntimeFaults::triggerDataRace()::$_0>(RuntimeFaults::triggerDataRace()::$_0&&) invoke.h:90 (CHIP8Emulator:arm64+0x100004b08)
+    #2 void std::__1::__thread_execute[abi:nqe220106]<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct>>, RuntimeFaults::triggerDataRace()::$_0, 0ul>(std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct>>, RuntimeFaults::triggerDataRace()::$_0>&, std::__1::__integer_sequence<unsigned long, 0ul>) thread.h:161 (CHIP8Emulator:arm64+0x100004b08)
+    #3 void* std::__1::__thread_proxy[abi:nqe220106]<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct>>, RuntimeFaults::triggerDataRace()::$_0>>(void*) thread.h:169 (CHIP8Emulator:arm64+0x100004b08)
+
+  Location is stack of main thread.
+
+  Thread T2 (tid=952853, running) created by main thread at:
+    #0 pthread_create <null> (libclang_rt.tsan_osx_dynamic.dylib:arm64e+0x33bac)
+    #1 std::__1::__libcpp_thread_create[abi:nqe220106](_opaque_pthread_t**, void* (*)(void*), void*) pthread.h:182 (CHIP8Emulator:arm64+0x1000049ac)
+    #2 std::__1::thread::thread[abi:nqe220106]<RuntimeFaults::triggerDataRace()::$_0&, 0>(RuntimeFaults::triggerDataRace()::$_0&) thread.h:221 (CHIP8Emulator:arm64+0x1000049ac)
+    #3 std::__1::thread::thread[abi:nqe220106]<RuntimeFaults::triggerDataRace()::$_0&, 0>(RuntimeFaults::triggerDataRace()::$_0&) thread.h:212 (CHIP8Emulator:arm64+0x1000049ac)
+    #4 RuntimeFaults::triggerDataRace() RuntimeFaults.cpp:30 (CHIP8Emulator:arm64+0x1000048b0)
+    #5 main main.cpp:26 (CHIP8Emulator:arm64+0x1000016a4)
+
+  Thread T1 (tid=952852, finished) created by main thread at:
+    #0 pthread_create <null> (libclang_rt.tsan_osx_dynamic.dylib:arm64e+0x33bac)
+    #1 std::__1::__libcpp_thread_create[abi:nqe220106](_opaque_pthread_t**, void* (*)(void*), void*) pthread.h:182 (CHIP8Emulator:arm64+0x1000049ac)
+    #2 std::__1::thread::thread[abi:nqe220106]<RuntimeFaults::triggerDataRace()::$_0&, 0>(RuntimeFaults::triggerDataRace()::$_0&) thread.h:221 (CHIP8Emulator:arm64+0x1000049ac)
+    #3 std::__1::thread::thread[abi:nqe220106]<RuntimeFaults::triggerDataRace()::$_0&, 0>(RuntimeFaults::triggerDataRace()::$_0&) thread.h:212 (CHIP8Emulator:arm64+0x1000049ac)
+    #4 RuntimeFaults::triggerDataRace() RuntimeFaults.cpp:29 (CHIP8Emulator:arm64+0x1000048a4)
+    #5 main main.cpp:26 (CHIP8Emulator:arm64+0x1000016a4)
+
+SUMMARY: ThreadSanitizer: data race RuntimeFaults.cpp:25 in RuntimeFaults::triggerDataRace()::$_0::operator()() const
+==================
+ThreadSanitizer: reported 1 warnings

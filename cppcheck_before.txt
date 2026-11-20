@@ -1,0 +1,30 @@
+Checking main.cpp ...
+1/2 files checked 12% done
+Checking Chip8.cpp ...
+Chip8.cpp:359:40: style: inconclusive: Function 'getRegister' argument 1 names different: declaration 'index' definition 'reg'. [funcArgNamesDifferent]
+uint8_t Chip8::getRegister(std::size_t reg) const {
+                                       ^
+Chip8.h:30:37: note: Function 'getRegister' argument 1 names different: declaration 'index' definition 'reg'.
+    uint8_t getRegister(std::size_t index) const;
+                                    ^
+Chip8.cpp:359:40: note: Function 'getRegister' argument 1 names different: declaration 'index' definition 'reg'.
+uint8_t Chip8::getRegister(std::size_t reg) const {
+                                       ^
+2/2 files checked 100% done
+Chip8.cpp:105:13: style: The function 'tickTimers' is never used. [unusedFunction]
+void Chip8::tickTimers() {
+            ^
+Chip8.cpp:110:13: style: The function 'setKey' is never used. [unusedFunction]
+void Chip8::setKey(uint8_t key, bool pressed) {
+            ^
+Chip8.cpp:359:16: style: The function 'getRegister' is never used. [unusedFunction]
+uint8_t Chip8::getRegister(std::size_t reg) const {
+               ^
+Chip8.cpp:363:17: style: The function 'getPC' is never used. [unusedFunction]
+uint16_t Chip8::getPC() const {
+                ^
+Chip8.cpp:367:17: style: The function 'getIndex' is never used. [unusedFunction]
+uint16_t Chip8::getIndex() const {
+                ^
+nofile:0:0: information: Active checkers: 186/189 (use --checkers-report=<filename> to see details) [checkersReport]
+

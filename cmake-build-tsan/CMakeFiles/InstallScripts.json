@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/wark/CLionProjects/CHIP8Emulator/cmake-build-tsan/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

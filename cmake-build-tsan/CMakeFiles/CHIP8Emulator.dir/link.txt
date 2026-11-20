@@ -1,0 +1,1 @@
+/usr/bin/c++ -fsanitize=thread -g -O1 -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=thread CMakeFiles/CHIP8Emulator.dir/main.cpp.o CMakeFiles/CHIP8Emulator.dir/Chip8.cpp.o CMakeFiles/CHIP8Emulator.dir/RuntimeFaults.cpp.o -o CHIP8Emulator
