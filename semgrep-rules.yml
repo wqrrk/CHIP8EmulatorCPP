@@ -1,0 +1,43 @@
+
+rules:
+  - id: chip8-static-s1
+    languages: [cpp]
+    severity: WARNING
+    message: "S1: Possible uninitialized variable"
+    pattern: |
+      int value;
+      ...
+      return value;
+
+  - id: chip8-static-s2
+    languages: [cpp]
+    severity: ERROR
+    message: "S2: Potential memory leak"
+    pattern: |
+      int* data = new int[100];
+      ...
+
+  - id: chip8-static-s3
+    languages: [cpp]
+    severity: ERROR
+    message: "S3: Out-of-bounds array access"
+    pattern: |
+      return values[5];
+
+  - id: chip8-static-s4
+    languages: [cpp]
+    severity: ERROR
+    message: "S4: Division by zero"
+    pattern: |
+      int divisor = 0;
+      ...
+      return value / divisor;
+
+  - id: chip8-static-s5
+    languages: [cpp]
+    severity: ERROR
+    message: "S5: Use-after-free"
+    pattern: |
+      delete value;
+      ...
+      return *value;
