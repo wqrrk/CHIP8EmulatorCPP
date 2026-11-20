@@ -13,6 +13,7 @@ add_executable(CHIP8Emulator
         Chip8.cpp
         RuntimeFaults.h
         RuntimeFaults.cpp
+        StaticFaults.cpp
 )
 
 target_compile_options(CHIP8Emulator PRIVATE
